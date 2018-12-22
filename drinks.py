@@ -1,4 +1,5 @@
 # drinks.py
+# pump 1: 100ml/s, pump 2: 200ml/s, pump 3: 200ml/s, pump 4-8: 400ml/s
 drink_list = [
 	{
 		"name": "Rum & Coke",
@@ -100,8 +101,7 @@ drink_list = [
 	}, {
 		"name": "Vodka Redbull",
 		"ingredients": {
-			"vodka": 60,
-			"redbull": 160
+			"vodka": 60
 		}
 	}, {
 		"name": "Gin Fizz",
@@ -142,6 +142,7 @@ drink_options = [
 	{"name": "White Rum", "value": "wrum"},
 	{"name": "Lemon Juice", "value": "lemonjuice"},
 	{"name": "Ginger Beer", "value": "gingerbeer"},
-	{"name": "Club Soda", "value": "clubsoda"}
+	{"name": "Club Soda", "value": "clubsoda"},
+	{"name": "Redbull", "value": "redbull"}
 
 ]

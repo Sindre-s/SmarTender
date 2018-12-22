@@ -31,9 +31,9 @@ NEOPIXEL_DATA_PIN = 26
 NEOPIXEL_CLOCK_PIN = 6
 NEOPIXEL_BRIGHTNESS = 64
 
-FLOW_RATE = 60.0/100.0
+FLOW_RATE = 60.0/400.0
 
-class Bartender(MenuDelegate): 
+class Bartender(MenuDelegate):
 	def __init__(self):
 		self.running = False
 
@@ -43,10 +43,10 @@ class Bartender(MenuDelegate):
 
 		self.btn1Pin = LEFT_BTN_PIN
 		self.btn2Pin = RIGHT_BTN_PIN
-	 
+
 	 	# configure interrups for buttons
 	 	GPIO.setup(self.btn1Pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-		GPIO.setup(self.btn2Pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)  
+		GPIO.setup(self.btn2Pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 		# configure screen
 		spi_bus = 0
@@ -82,7 +82,7 @@ class Bartender(MenuDelegate):
 		# turn everything off
 		for i in range(0, self.numpixels):
 			self.strip.setPixelColor(i, 0)
-		self.strip.show() 
+		self.strip.show()
 
 		print "Done initializing"
 
@@ -96,8 +96,8 @@ class Bartender(MenuDelegate):
 			json.dump(configuration, jsonFile)
 
 	def startInterrupts(self):
-		GPIO.add_event_detect(self.btn1Pin, GPIO.FALLING, callback=self.left_btn, bouncetime=LEFT_PIN_BOUNCE)  
-		GPIO.add_event_detect(self.btn2Pin, GPIO.FALLING, callback=self.right_btn, bouncetime=RIGHT_PIN_BOUNCE)  
+		GPIO.add_event_detect(self.btn1Pin, GPIO.FALLING, callback=self.left_btn, bouncetime=LEFT_PIN_BOUNCE)
+		GPIO.add_event_detect(self.btn2Pin, GPIO.FALLING, callback=self.right_btn, bouncetime=RIGHT_PIN_BOUNCE)
 
 	def stopInterrupts(self):
 		GPIO.remove_event_detect(self.btn1Pin)
@@ -154,7 +154,7 @@ class Bartender(MenuDelegate):
 					for p in self.pump_configuration.keys():
 						if (ing == self.pump_configuration[p]["value"]):
 							presentIng += 1
-				if (presentIng == len(ingredients.keys())): 
+				if (presentIng == len(ingredients.keys())):
 					i.visible = True
 			elif (i.type == "menu"):
 				self.filterDrinks(i)
@@ -262,7 +262,7 @@ class Bartender(MenuDelegate):
 		# turn lights off
 		for i in range(0, self.numpixels):
 			self.strip.setPixelColor(i, 0)
-		self.strip.show() 
+		self.strip.show()
 
 	def pour(self, pin, waitTime):
 		GPIO.output(pin, GPIO.LOW)
@@ -350,13 +350,13 @@ class Bartender(MenuDelegate):
 	def run(self):
 		self.startInterrupts()
 		# main loop
-		try:  
+		try:
 			while True:
 				time.sleep(0.1)
-		  
-		except KeyboardInterrupt:  
-			GPIO.cleanup()       # clean up GPIO on CTRL+C exit  
-		GPIO.cleanup()           # clean up GPIO on normal exit 
+
+		except KeyboardInterrupt:
+			GPIO.cleanup()       # clean up GPIO on CTRL+C exit
+		GPIO.cleanup()           # clean up GPIO on normal exit
 
 		traceback.print_exc()
 
@@ -364,7 +364,3 @@ class Bartender(MenuDelegate):
 bartender = Bartender()
 bartender.buildMenu(drink_list, drink_options)
 bartender.run()
-
-
-
-
