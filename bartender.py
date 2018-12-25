@@ -18,10 +18,10 @@ SCREEN_WIDTH = 128
 SCREEN_HEIGHT = 64
 
 LEFT_BTN_PIN = 13
-LEFT_PIN_BOUNCE = 1000
+LEFT_PIN_BOUNCE = 500
 
 RIGHT_BTN_PIN = 5
-RIGHT_PIN_BOUNCE = 2000
+RIGHT_PIN_BOUNCE = 500
 
 OLED_RESET_PIN = 15
 OLED_DC_PIN = 16
@@ -327,12 +327,21 @@ class Bartender(MenuDelegate):
 		self.running = False
 
 	def left_btn(self, ctx):
+		print("LEFT_BTN pressed")
 		if not self.running:
+			self.running = True
 			self.menuContext.advance()
+			print("Finished processing button press")
+		self.running = False
 
 	def right_btn(self, ctx):
+		print("RIGHT_BTN pressed")
 		if not self.running:
+			self.running = True
 			self.menuContext.select()
+			print("Finished processing button press")
+			self.running = 2
+			print("Starting button timeout")
 
 	def updateProgressBar(self, percent, x=15, y=15):
 		height = 10
