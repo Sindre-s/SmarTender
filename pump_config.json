@@ -1,40 +1,48 @@
 {
 	"pump_1": {
+		"flowrate": 1.31,
 		"name": "Pump 1",
 		"pin": 17,
 		"value": "syrup"
 	},
 	"pump_2": {
+		"flowrate": 0.6,
 		"name": "Pump 2",
 		"pin": 27,
 		"value": "rum"
 	},
 	"pump_3": {
+		"flowrate": 0.6,
 		"name": "Pump 3",
 		"pin": 22,
 		"value": "limejuice"
 	},
 	"pump_4": {
+		"flowrate": 0.16,
 		"name": "Pump 4",
 		"pin": 23,
 		"value": "tonic"
 	},
 	"pump_5": {
+		"flowrate": 0.16,
 		"name": "Pump 5",
 		"pin": 24,
 		"value": "vodka"
 	},
 	"pump_6": {
+		"flowrate": 0.16,
 		"name": "Pump 6",
 		"pin": 25,
 		"value": "gin"
 	},
 	"pump_7": {
+		"flowrate": 0.16,
 		"name": "Pump 7",
 		"pin": 12,
 		"value": "gingerbeer"
 	},
 	"pump_8": {
+		"flowrate": 0.16,
 		"name": "Pump 8",
 		"pin": 16,
 		"value": "russianwater"
