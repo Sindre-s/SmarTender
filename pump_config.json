@@ -1,18 +1,18 @@
 {
 	"pump_1": {
-		"flowrate": 1.31,
+		"flowrate": 1.2,
 		"name": "Pump 1",
 		"pin": 17,
 		"value": "syrup"
 	},
 	"pump_2": {
-		"flowrate": 0.6,
+		"flowrate": 0.55,
 		"name": "Pump 2",
 		"pin": 27,
-		"value": "rum"
+		"value": "lemonjuice"
 	},
 	"pump_3": {
-		"flowrate": 0.6,
+		"flowrate": 0.55,
 		"name": "Pump 3",
 		"pin": 22,
 		"value": "limejuice"
@@ -21,7 +21,7 @@
 		"flowrate": 0.16,
 		"name": "Pump 4",
 		"pin": 23,
-		"value": "tonic"
+		"value": "wrum"
 	},
 	"pump_5": {
 		"flowrate": 0.16,
@@ -39,12 +39,12 @@
 		"flowrate": 0.16,
 		"name": "Pump 7",
 		"pin": 12,
-		"value": "gingerbeer"
+		"value": "mintsyrup"
 	},
 	"pump_8": {
 		"flowrate": 0.16,
 		"name": "Pump 8",
 		"pin": 16,
-		"value": "russianwater"
+		"value": "cointreau"
 	}
 }

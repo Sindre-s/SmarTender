@@ -14,16 +14,6 @@ drink_list = [
 			"tonic": 150
 		}
 	}, {
-		"name": "Long Island",
-		"ingredients": {
-			"gin": 15,
-			"rum": 15,
-			"vodka": 15,
-			"tequila": 15,
-			"cola": 100,
-			"oj": 30
-		}
-	}, {
 		"name": "Screwdriver",
 		"ingredients": {
 			"vodka": 50,
@@ -33,7 +23,8 @@ drink_list = [
 		"name": "Margarita",
 		"ingredients": {
 			"tequila": 50,
-			"mmix": 150
+			"cointreau": 20,
+			"limejuice": 15
 		}
 	}, {
 		"name": "Gin & Juice",
@@ -56,10 +47,16 @@ drink_list = [
 			"syrup": 15
 		}
 	}, {
+		"name": "Mojito",
+		"ingredients": {
+			"wrum": 60,
+			"limejuice": 22,
+			"mintsyrup": 15
+		}
+	}, {
 		"name": "Moscow Mule",
 		"ingredients": {
 			"vodka": 60,
-			"gingerbeer": 90,
 			"limejuice": 30
 		}
 	}, {
@@ -81,7 +78,6 @@ drink_list = [
 		"name": "Tom Collins",
 		"ingredients": {
 			"gin": 45,
-			"clubsoda": 30,
 			"lemonjuice": 22,
 			"syrup": 22
 		}
@@ -104,14 +100,22 @@ drink_list = [
 			"vodka": 60
 		}
 	}, {
+		"name": "Lemondrop",
+		"ingredients": {
+			"vodka": 60,
+			"cointreau": 15,
+			"syrup": 30,
+			"lemonjuice": 30
+		}
+	}, {
 		"name": "Gin Fizz",
 		"ingredients": {
 			"gin": 60,
-			"clubsoda": 30,
 			"lemonjuice": 30,
 			"syrup": 22
 		}
-	}, {
+	},
+	{
 		"name": "Sidney Icetea",
 		"ingredients": {
 			"cointreau": 10,
@@ -122,6 +126,25 @@ drink_list = [
 			"limejuice": 15,
 			"cola": 100,
 			"syrup": 15
+		}
+
+	},
+	{
+		"name": "Long Island",
+		"ingredients": {
+			"cointreau": 22,
+			"gin": 22,
+			"tequila": 22
+			"rum": 22,
+			"vodka": 22,
+			"limejuice": 22,
+			"syrup": 22
+		}
+	}, {
+		"name": "Cuba Libre",
+		"ingredients": {
+			"wrum": 50,
+			"limejuice": 10
 		}
 	}
 ]
@@ -136,6 +159,7 @@ drink_options = [
 	{"name": "Orange Juice", "value": "oj"},
 	{"name": "Margarita Mix", "value": "mmix"},
 	{"name": "Lime Juice", "value": "limejuice"},
+	{"name": "Mint Syrup", "value": "mintsyrup"},
 	{"name": "Cointreau", "value": "cointreau"},
 	{"name": "White Rum", "value": "wrum"},
 	{"name": "Simple Syrup", "value": "syrup"},
